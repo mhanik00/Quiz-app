@@ -1,46 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Quiz from './Quiz';
+import Scores from './Scores';
+import { HomeIcon } from '@heroicons/react/24/solid';
 
 const Home = () => {
-  const [scores, setScores] = useState([]);
   const [showQuiz, setShowQuiz] = useState(false);
 
-  useEffect(() => {
-    const savedScores = JSON.parse(localStorage.getItem('scores')) || [];
-    setScores(savedScores);
-  }, []);
-
   const handleQuizComplete = () => {
-    const savedScores = JSON.parse(localStorage.getItem('scores')) || [];
-    setScores(savedScores);
     setShowQuiz(false);
     localStorage.removeItem('name');
   };
 
   return (
-    <div className="min-h-screen  flex flex-col items-center justify-center">
+    <div className="min-h-screen flex flex-col items-center justify-center">
       {showQuiz ? (
         <Quiz onQuizComplete={handleQuizComplete} />
       ) : (
-        <div className="glass max-w-xl mx-auto mt-10 p-6 text-center">
-          <h2 className="text-2xl text-lime-400 font-bold mb-4">Competitors' Scores</h2>
-          <ul>
-            {scores.map((entry, index) => (
-              <li key={index} className="mb-2 font-bold text-slate-100">
-                <span className="font-bold text-slate-100">{entry.name}</span>: {entry.score}
-              </li>
-            ))}
-           
-           
-
-          </ul>
-          <button
+        <motion.div
+          className="glass max-w-xl mx-auto mt-10 p-6 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-2xl font-bold mb-4 flex items-center justify-center gradient-text">
+            <HomeIcon className="h-8 w-8 text-blue-500 mr-2" />
+            Competitors' Scores
+          </h2>
+          <Scores />
+          <motion.button
             onClick={() => setShowQuiz(true)}
             className="bg-blue-500 text-white p-2 rounded mt-4"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
             Start New Quiz
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       )}
     </div>
   );

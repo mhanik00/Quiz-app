@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import anime from 'animejs';
 import Question from './Question';
 import ProgressBar from './ProgressBar';
+import { CheckCircleIcon, UserIcon } from '@heroicons/react/24/solid';
 
 const quizData = [
   {
@@ -170,11 +173,26 @@ const Quiz = ({ onQuizComplete }) => {
     setIsNameSubmitted(true);
   };
 
+  useEffect(() => {
+    anime({
+      targets: '.gradient-text',
+      translateY: [-20, 0],
+      opacity: [0, 1],
+      duration: 1000,
+      easing: 'easeOutExpo'
+    });
+  }, []);
+
   return (
-    <div className="glass max-w-xl mx-auto mt-10 p-6">
+    <motion.div
+      className="glass max-w-xl mx-auto mt-10 p-6"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       {!isNameSubmitted ? (
         <form onSubmit={handleNameSubmit} className="text-center">
-          <h2 className="text-2xl text-lime-300 font-bold mb-4">Enter Your Name</h2>
+          <h2 className="text-2xl font-bold mb-4 gradient-text">Enter Your Name</h2>
           <input
             type="text"
             value={name}
@@ -182,13 +200,21 @@ const Quiz = ({ onQuizComplete }) => {
             className="p-2 border rounded mb-4 w-full"
             required
           />
-          <button type="submit" className="bg-blue-500 text-white p-2 rounded">
+          <motion.button
+            type="submit"
+            className="bg-blue-500 text-white p-2 rounded"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             Start Quiz
-          </button>
+          </motion.button>
         </form>
       ) : showScore ? (
         <div className="p-4 border rounded shadow-md text-center">
-          <h2 className="text-4xl font-bold text-green-500 mb-4">Your Score</h2>
+          <h2 className="text-4xl font-bold mb-4 flex items-center justify-center gradient-text">
+            <CheckCircleIcon className="h-8 w-8 text-green-500 mr-2" />
+            Your Score
+          </h2>
           <p className="text-2xl">{score}/{quizData.length}</p>
         </div>
       ) : (
@@ -202,7 +228,7 @@ const Quiz = ({ onQuizComplete }) => {
           />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

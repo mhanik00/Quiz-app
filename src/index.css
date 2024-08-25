@@ -15,13 +15,18 @@ body {
   }
   
   .glass {
-    backdrop-filter: blur(8px) saturate(180%);
+    backdrop-filter: blur(4px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(108, 95, 112, 0.3); /* Adjusted for more transparency */
+    background-color: rgba(45, 42, 46, 0.3); /* Adjusted for more transparency */
     border-radius: 12px;
-    border: 1px solid rgba(11, 135, 116, 0.3);
+    border: 1px solid rgba(20, 86, 220, 0.3);
     padding: 20px;
     box-shadow: 0px 12px 15px 16px rgba(33, 35, 33, 0.642);
+  }
+  .gradient-text {
+    background: linear-gradient(150deg, rgb(255, 96, 120) 1%, rgb(70, 255, 227) 30%, rgba(0,212,255,1) 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   
   
