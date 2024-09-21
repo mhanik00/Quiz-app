@@ -7,104 +7,104 @@ import { CheckCircleIcon, UserIcon } from '@heroicons/react/24/solid';
 
 const quizData = [
   {
-    question: "What is the capital of France?",
-    options: ["Paris", "London", "Berlin", "Madrid"],
-    answer: "Paris"
+    question: "Affected syn..?",
+    options: ["Unaffected", "Falter", "Feigned", "Rich"],
+    answer: "Feigned"
   },
   {
-    question: "What is 2 + 2?",
-    options: ["3", "4", "5", "6"],
-    answer: "4"
+    question: "Affluent ant...?",
+    options: ["Impoverished", "Improve", "Desire", "Pacify"],
+    answer: "Impoverished"
   },
   {
-    question: "Who is the CEO of Tesla?",
-    options: ["Jeff Bezos", "Elon Musk", "Bill Gates", "Tony Stark"],
-    answer: "Elon Musk"
+    question: "Affinity syn...?",
+    options: ["Kinship", "Boring", "Estrange", "Well-to-do"],
+    answer: "Kinship"
   },
   {
-    question: "What is the largest planet in our solar system?",
-    options: ["Earth", "Mars", "Jupiter", "Saturn"],
-    answer: "Jupiter"
+    question: "Anarchy syn...?",
+    options: ["Likeness", "Absence of government", "Aspiration", "Harmony"],
+    answer: "Absence of government"
   },
   {
-    question: "What is the chemical symbol for water?",
-    options: ["O2", "H2O", "CO2", "NaCl"],
-    answer: "H2O"
+    question: "Analogy ant...?",
+    options: ["Alien", "Enmity", "Tyro", "Flexible"],
+    answer: "Alien"
   },
   {
-    question: "Who wrote 'To Kill a Mockingbird'?",
-    options: ["Harper Lee", "Mark Twain", "J.K. Rowling", "Ernest Hemingway"],
-    answer: "Harper Lee"
+    question: "Amity ant...'?",
+    options: ["Enmity", "Enhance", "Harmony", "Correct"],
+    answer: "Enmity"
   },
   {
-    question: "What is the speed of light?",
-    options: ["300,000 km/s", "150,000 km/s", "450,000 km/s", "600,000 km/s"],
-    answer: "300,000 km/s"
+    question: "Amiable syn...?",
+    options: ["Estrange", "Rich", "Friendly", "Hostile"],
+    answer: "Friendly"
   },
   {
-    question: "Which element has the atomic number 1?",
-    options: ["Helium", "Oxygen", "Hydrogen", "Carbon"],
-    answer: "Hydrogen"
+    question: "Amplify syn...?",
+    options: ["Improve", "Increase", "Correct", "Aspiration"],
+    answer: "Increase"
   },
   {
-    question: "What is the tallest mountain in the world?",
-    options: ["K2", "Kangchenjunga", "Mount Everest", "Lhotse"],
-    answer: "Mount Everest"
+    question: "Ally syn...?",
+    options: ["Associate", "Enhance", "Estrange", "Alloy"],
+    answer: "Associate"
   },
   {
-    question: "Who painted the Mona Lisa?",
-    options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
-    answer: "Leonardo da Vinci"
+    question: "Altitude ant...?",
+    options: ["Enhance", "Nadir", "Height", "Hostile"],
+    answer: "Nadir"
   },
   {
-    question: "What is the orange part of an egg called?",
-    options: ["Yolk", "White", "Shell", "Albumen"],
-    answer: "Yolk"
+    question: "Afford syn..?",
+    options: ["Capable", "Falter", "Yield", "Albumen"],
+    answer: "Capable"
   },
   {
-    question: "How many legs do insects have?",
-    options: ["4", "6", "8", "10"],
-    answer: "6"
+    question: "Alacrity ant...?",
+    options: ["Nadir", "Apathy", "Hostile", "Enemy"],
+    answer: "Apathy"
   },
   {
-    question: "What is a baby kangaroo called?",
-    options: ["Joey", "Cub", "Calf", "Pup"],
-    answer: "Joey"
+    question: "Alluring syn...?",
+    options: ["Mitigate", "Temper", "Tempting", "Elevation"],
+    answer: "Tempting"
   },
   {
-    question: "What is the closest planet to the Sun?",
-    options: ["Venus", "Earth", "Mars", "Mercury"],
-    answer: "Mercury"
+    question: "Amateur syn...?",
+    options: ["Novice", "Expert", "Clear", "Separate"],
+    answer: "Novice"
   },
   {
-    question: "In which country can you find the Eiffel Tower?",
-    options: ["Italy", "France", "Germany", "Spain"],
-    answer: "France"
+    question: "Amazing ant...?",
+    options: ["Ordinary", "Temper", "Definite", "strange", ],
+    answer: "Ordinary"
   },
   {
-    question: "How many days are there in a year?",
-    options: ["364", "365", "366", "367"],
-    answer: "365"
+    question: "Amalgamate syn...?",
+    options: ["Tyro", "Admix", "Desire", "Get better"],
+    answer: "Admix"
   },
   {
-    question: "How many players are in a soccer team?",
-    options: ["9", "10", "11", "12"],
-    answer: "11"
+    question: "Ambition syn...?",
+    options: ["Desire", "Admix", "Apathy", "Definite"],
+    answer: "Desire"
   },
   {
-    question: "Where do polar bears live?",
-    options: ["Antarctica", "Arctic", "Africa", "Australia"],
-    answer: "Arctic"
+    question: "Amenable ant...?",
+    options: ["Aggravate", "Defiant", "Ruin", "Crabby"],
+    answer: "Defiant"
   },
   {
-    question: "Which is faster, light or sound?",
-    options: ["Light", "Sound"],
-    answer: "Light"
+    question: "Altruism syn...?",
+    options: ["Nadir", "Apathy", "Benevolence", "Enemy"],
+    answer: "Benevolence"
   },
   {
-    question: "How many letters are in the English alphabet?",
-    options: ["24", "25", "26", "27"],
-    answer: "26"
+    question: "Amending ant...?",
+    options: ["Mitigate", "Temper", "Tempting", "Correct"],
+    answer: "Correct"
   }
 ];
 
@@ -113,7 +113,7 @@ const Quiz = ({ onQuizComplete }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(10);
+  const [timeLeft, setTimeLeft] = useState(30);
   const [isCorrect, setIsCorrect] = useState(true);
   const [name, setName] = useState('');
   const [isNameSubmitted, setIsNameSubmitted] = useState(false);
@@ -137,7 +137,7 @@ const Quiz = ({ onQuizComplete }) => {
       handleAnswer(null);
     }
     const timer = setInterval(() => {
-      setTimeLeft(timeLeft - 1);
+      setTimeLeft(timeLeft-1);
     }, 1000);
     return () => clearInterval(timer);
   }, [timeLeft]);
@@ -154,7 +154,7 @@ const Quiz = ({ onQuizComplete }) => {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < quizData.length) {
       setCurrentQuestion(nextQuestion);
-      setTimeLeft(10);
+      setTimeLeft(30);
     } else {
       setShowScore(true);
       saveScore();
